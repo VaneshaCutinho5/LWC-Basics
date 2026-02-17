@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Student Data">
+        <div>
+            <table>
+            <tr>
+                <th>Student Name</th>
+                <th>Class</th>
+                <th>Age</th>
+                <!--<th><lightning-button variant="brand" label="Add" title="Add Student" onclick={handleClickAdd} data-index={index}  class="slds-m-left_x-small"></lightning-button></th>-->
+                <th> </th>
+                <th> </th>
+                
+            </tr>
+
+            <template for:each={studentNames} for:item="student" for:index = "index">
+                <tr key = {student.name}>
+                    <td>{student.name}</td>
+                    <td>{student.course}</td>
+                    <td>{student.age}</td>
+                    <td></td>
+                    <td><lightning-button variant="brand" label="Update" title="Update Student" onclick={handleClickUpdate} data-index={index}  class="slds-m-left_x-small"></lightning-button></td>                
+                    <td><lightning-button variant="brand" label="Delete" title="Delete Student" onclick={handleClickDelete} data-index={index}  class="slds-m-left_x-small"></lightning-button></td>                
+
+                </tr>
+            </template>
+                <!--<tr>
+                    <td>Student 1</td>
+                    <td>CS</td>
+                    <td>22</td>
+                </tr>-->
+            </table>
+        </div>
+    </lightning-card>
+   
+</template>

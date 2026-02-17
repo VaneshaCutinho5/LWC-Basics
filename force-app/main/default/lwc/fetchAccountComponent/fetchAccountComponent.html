@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Student Data">
+        <lightning-input
+                name = "Account Search"
+                label = "Search Accounts"
+                type = "search"
+                onchange = {handleSearch}></lightning-input>
+        <div>
+            <table>
+                <tr>
+                    <th>Account Name</th>
+                    <th>Annual Revenue</th>
+                    <th></th>
+                    <!--<th><lightning-button variant="brand" label="Add" title="Add Student" onclick={handleClickAdd} data-index={index}  class="slds-m-left_x-small"></lightning-button></th>-->
+                    <th> </th>
+                    <th> </th>
+                </tr>
+
+                <template for:each={accountData} for:item="account" for:index="index">
+                    <tr key={account.Name}>
+                        <td>{account.Name}</td>
+                        <td>{account.AnnualRevenue}</td>
+                        <td><lightning-button variant = "destructive" label = "Delete Account" title = "Delete" onclick={handleClick} value={account.Id}></lightning-button> </td>
+                    </tr>
+                </template>
+            </table>
+        </div>
+    </lightning-card>
+</template>

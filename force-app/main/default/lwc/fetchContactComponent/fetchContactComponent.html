@@ -1,0 +1,26 @@
+<template>
+    <div>
+         <lightning-card>
+         <!--<lightning-input
+                name = "Contact Search"
+                label = "Search Contacts"
+                type = "search"
+                onchange = {handleSearch}></lightning-input> -->
+            <table>
+                <tr>
+                    <th>Contact Name</th>
+                    <th>Account Name</th>
+                    <th>Contact Owner</th>
+                </tr>
+                <template for:each={conList.data} for:item = "contact">
+                    <tr key = {contact.Name}>
+                        <td>{contact.Name}</td>
+                        <td>{contact.Account.Name}</td>
+                        <!-- <td>{contact.AccountId}</td>  -->
+                        <td>{contact.OwnerId}</td>
+                    </tr>    
+                </template>
+            </table>
+        </lightning-card>
+    </div>
+</template>
