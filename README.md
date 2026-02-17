@@ -1,7 +1,7 @@
 # LWC-Basics
 A beginner-friendly repository to learn and practice Lightning Web Components (LWC) fundamentals including component structure, data binding, events, and Apex integration.
 
-## A structured learning repository for mastering the fundamentals of Lightning Web Components (LWC).
+### A structured learning repository for mastering the fundamentals of Lightning Web Components (LWC).
 Covers:
 
 - Component creation
